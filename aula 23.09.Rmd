@@ -1,0 +1,43 @@
+---
+title: "aula 23.09"
+output: html_document
+date: "23-09-2024"
+---
+texto ~~grifado~~
+
+Referenciar uma função `print()`
+
+# Figuras em disco local, via R:
+
+
+Link [Site DEST-UFPR](http://est.ufpr.br).
+
+
+[//]: (ESTE É UM COMENTÁRIO. ) 
+
+
+Texto retirado da fonte [^1].
+
+
+
+[^1]: 
+
+
+## janelas múltiplas
+
+função 'par', o atributo 'mfrow' distribui gráficos por linhas e colunas e 'mar' vai controlar as margens: *bottom* *left* *top* *right*
+
+par (mar=c(4,2,1,6))
+barplot(1:10, xlab="gráfico de barras")
+
+```{r}
+par(mfrow=c(3,3))
+barplot(1:10)
+barplot(1:10)
+```
+```
+
+
+
+
+
