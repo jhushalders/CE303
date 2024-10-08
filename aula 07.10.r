@@ -30,5 +30,53 @@ faces(longley[,-6],face.type=0)
 faces(longley[,-6],face.type=1)
 faces(longley[,-6],face.type=2)
 
+#NUVEM DE PALAVRAS
+url1 <- "https://raw.githubusercontent.com/andersonara/"
+url2 <- "datasets/master/dilma.txt"
+arquivo <- readLines(paste0(url1,url2))
+arquivo2 <- iconv(arquivo, from="", to="utf-8")
+require(wordcloud)
+require(tm)
+doc <- Corpus(VectorSource(arquivo2))
+doc <- tm_map(doc,removePunctuation)
+doc <- tm_map(doc,tolower)
+doc <- tm_map(doc,removeWords,c(stopwords("portuguese"),"nco","ser"))
+wordcloud(doc, col=c("grey","orange","red"))
+
+#SUNBURST
+#o mais massa
+sequencia<- read.table(text = '
+A-aa-aaa-end
+A-aa-aaa-end
+A-aa-vvv-end
+A-aa-vvv-end
+A-cc-vvv-end
+A-cc-vvv-end
+B-aa-vvv-end
+B-aa-vvv-end
+B-bb-rr-end
+B-bb-rr-end
+C-aa-rr-end
+C-aa-rr-end
+C-bb-rr-end
+C-bb-rr-end
+C-cc-rr-end
+')
+sequencia$V2 <- seq_along(sequencia$V1)
+require(sunburstR)
+sunburst(sequencia)
+
+#SANKEY
+
+
+
+
+
+
+
+
+
+
+
 
 
