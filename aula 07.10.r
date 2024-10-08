@@ -21,3 +21,14 @@ tableplot(iris, sortCol = 1)
 tableplot(iris, sortCol = 2)
 tableplot(iris, sortCol = 3)
 tableplot(iris, sortCol = 4)
+
+#FACES OF CHERNOFF
+install.packages("aplpack")
+require(aplpack)
+data(longley)
+faces(longley[,-6],face.type=0)
+faces(longley[,-6],face.type=1)
+faces(longley[,-6],face.type=2)
+
+
+
