@@ -49,4 +49,3 @@ sankey <- sankeyNetwork(Links = links, Nodes = nos,
 
 # Exibir o gráfico
 sankey
-hyukfyui ,
