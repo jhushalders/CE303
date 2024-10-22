@@ -8,4 +8,6 @@ head(mtcars)
 
 #gráfico dispersão
 mtcars %>%ggplot(aes(x=hp, y=mpg)) +
-  geom_point()
+  geom_point(size=3, col="tomato") +
+  theme_bw() #fundo
+
