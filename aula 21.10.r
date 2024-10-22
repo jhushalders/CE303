@@ -74,7 +74,5 @@ VB = c(80,100,110,90)
 dados = data.frame(VA,VB)
 dados$cores <- ifelse(VA-VB = 0, "red", "green")
 
-dados %>% ggplot(aes(x=1, xend = 2, y = VA, yend = VB, col = cores))+
-  geom_segment(size=5)+
-  theme_miniam()
+
   
